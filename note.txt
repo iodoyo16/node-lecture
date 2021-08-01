@@ -6,3 +6,7 @@ then method를 이용해서 response 를 받고 res.json()을 한다. json메소
 (.then 이용)res object에 담긴 내용을 이용해 client를 redirection 하거나 다른 작업을 한다.
 
 html -> js(login.js or register.js) -> index.js(routing  get/post, control) -> control에서 백엔드작업
+
+await 함수 호출은 async 함수안에서만 가능.
+(promise를 반환하는 함수의 경우 따로 async 선언한 함수내부가 아니여도 알아서 async 처리)
+.then으로 접근하지 않아도 await을 이용해서 접근 가능, 각자 스타일에 따라서 작성
