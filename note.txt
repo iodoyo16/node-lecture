@@ -1,0 +1,8 @@
+html - js
+유저의 요청을 서버로 req에 담아서 전달: 
+req{ id: id.value, password: password.value,}
+fetch 이용해서 method, headers, body(req를 JSON.stringify)를 담은 object를 전달하고
+then method를 이용해서 response 를 받고 res.json()을 한다. json메소드가 완료되면
+(.then 이용)res object에 담긴 내용을 이용해 client를 redirection 하거나 다른 작업을 한다.
+
+html -> js(login.js or register.js) -> index.js(routing  get/post, control) -> control에서 백엔드작업
