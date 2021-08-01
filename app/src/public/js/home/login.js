@@ -8,7 +8,8 @@ const loginBtn=loginform.querySelector("button");
 
 loginBtn.addEventListener("click",handleLoginBtnClick);
 
-function handleLoginBtnClick(){
+function handleLoginBtnClick(event){
+    event.preventDefault();
     const req={
         id: id.value,
         password:password.value,
@@ -21,7 +22,6 @@ function handleLoginBtnClick(){
         body: JSON.stringify(req),
     }).then((res)=>res.json())
     .then((res)=>{
-        console.log(res);
         if(res.success===true){
             location.href="/";//루트경로
         }else{

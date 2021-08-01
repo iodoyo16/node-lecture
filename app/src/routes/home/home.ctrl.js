@@ -8,6 +8,11 @@ const process={
         const response=user.login();
         return res.json(response);
     },
+    register: (req,res)=>{
+        const user=new User(req.body);
+        const response=user.register();
+        return res.json(response);
+    }
 }
 
 const view={
@@ -16,6 +21,9 @@ const view={
     },
     login : (req,res)=>{
         res.render("home/login.html");
+    },
+    register: (req,res)=>{
+        res.render("home/register.html");
     },
 }
 module.exports={        ///*{

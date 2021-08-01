@@ -5,7 +5,7 @@ class UserStorage{
         id: ["rkfkaap", "iodoyo", "durfbgksmsskfro"],
         password:["xhxkdl11!","xhxkdl12!","xhxkdl13!"],
         name:["문상영","toms","IU"],
-    }
+    };
     static getUsers(...fields){// field 명으로 전체 유저의 field 배열을 가져옴
         const users=this.#users;
         const askedFileds=fields.reduce((askedFileds,field)=>{
@@ -16,7 +16,7 @@ class UserStorage{
         },{});
         
         return askedFileds;
-    }
+    };
     static getUserInfo(id){//id로 해당 유저의 정보를 가져옴
         const users=this.#users;
         const idx=users.id.indexOf(id);
@@ -26,6 +26,12 @@ class UserStorage{
             return askedUserInfo;
         },{});
         return askedUserInfo;
+    };
+    static save(userinfo){
+        const users=this.#users;
+        users.id.push(userInfo.id);
+        users.id.push(userInfo.name);
+        users.id.push(userInfo.password);
     }
 }
 
