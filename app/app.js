@@ -6,6 +6,9 @@
 //module
 const express=require('express');
 const app=express();
+const dotenv=require("dotenv");//환경변수를 등록하는 방법이 os 마다 다 다른데 dotenv를 이용하면 통일할 수 있다.
+dotenv.config();// config method 가 .env의 환경변수를 nodejs에서 접근할수 있게
+//process.env에 등록
 
 //routing
 const home=require("./src/routes/home");
